@@ -145,65 +145,67 @@ while True:
 
 
 # for loops
-# total = 0
-# for item in [10.39,60]:
-#     total+= item
-# print(total)
+total = 0 # intialize total and set to 0
+for item in range(0, 10): # item is variable in for loop in which first loop
+    # item will be 1 ,second loop items will be 2 and so on
+    total+= item
+print(total)
 
-#
-# for countx in range(0, 5):
-#     for county in range(0, 2):
-#         print(countx, county)
+#nested for looop
+for countx in range(0, 5): #run these code for basic understanding of nested for loop
+    for county in range(0, 2):
+        print(countx, county)
 
-# numbers = [5,2,5,2,2]
-# for items in numbers:
-#     print(items * 'x')
-# numbers = [5, 2, 5, 2, 2]
-# for x_count in numbers:
-#     output =''
-#     for count in range(x_count):
-#         output+='x'
-#         print(output)
+
+# print x in form of given list values
+numbers = [5,2,5,2,2]
+for items in numbers:
+    print(items * 'x')
+numbers = [5, 2, 5, 2, 2]
+for x_count in numbers:
+    output =''
+    for count in range(x_count):
+        output+='x'
+        print(output)
 
 # lists
-# names = ['john', 'bob']
-#
-# names[0] = 'jon'
-# print(names)
+names = ['john', 'bob']
+
+names[0] = 'jon'#changing john to jon
+print(names)
 
 # finding largest number in a list
-
-# lists = [4,3, 4, 5, 6, 7, 8, 9]
-# max = lists[0]
-# for number in lists:
-#     if max > number:
-#         max = number
-# print(number)
+lists = [4,3, 4, 5, 6, 7, 8, 9]
+max = lists[0] #setting the first number as max
+for number in lists: #for loop to traverse the whole list
+    if max > number: #checking the max
+        max = number #
+print(number)
 
 # 2dimensnional lists
 
-# matrix = [
-#     [1, 2, 3],
-#     [3, 4, 5],
-#     [6, 7, 9]
-# ]
-# print(matrix[0][2])
-# for row in matrix:
-#     for items in row:
-#         print(items)
+matrix = [
+    [1, 2, 3],
+    [3, 4, 5],
+    [6, 7, 9]
+]
+print(matrix[0][2])
+for row in matrix:
+    for items in row:
+        print(items)
 
-
-# numbers = [2,3,5,2,1]
-# numbers2 = []
-# for number in numbers:
-#     if number not in numbers2:
-#         numbers2.append(number)
-# print(numbers2)
+# program to copy all elements from one list to another list(important)
+numbers = [2,3,5,2,1]
+numbers2 = []
+for number in numbers:
+    if number not in numbers2:
+        numbers2.append(number)
+print(numbers2)
 
 # tuple
-# cordinates = (1, 2, 3)
-# x, y, z = cordinates
-# print(x, y, z)
+cordinates = (1, 2, 3)
+x, y, z = cordinates
+print(x, y, z)
 
 # dictionaries
 # customer = {
