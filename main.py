@@ -4,7 +4,7 @@ print(price)
 rating = 7.0  # float
 name = "vaishanv"  # string
 is_true = False  # bool
-name2 = input('What is your name')  # taking input from user and saves in variable name
+name2 = input('What is your name')  # taking input from user and saves in variable name2
 print('hi' + " " + name2)  # concatenation of string(eg a+b = ab)
 
 # exercise 1
