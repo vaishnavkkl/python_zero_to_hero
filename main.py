@@ -610,3 +610,12 @@ while n > 0:  # condition
     # (for storing correct order we actually use rem = rem + str(n%2)
     n = n // 2  # divide the input by 2 and store in n
 print(rem)
+
+#DATE TIME modules
+import datetime #importing
+
+today = datetime.date.today()  # using datetime method saving todays date in variable 'today'
+birthday = datetime.date(1999, 3, 22) # saving the input date into birthday
+print(today - birthday) #calculation of current age
+date = datetime.datetime.strptime('march 09, 2019', '%B %d, %Y')#date  format
+print(date)
