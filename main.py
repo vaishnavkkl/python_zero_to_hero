@@ -530,6 +530,7 @@ for i in range(string_cases):  # for loop to take n strings
             odd = odd + strings[j]  # odd indexed letters store in odd
     print(f'{even} {odd}')
 
+
 # n = int(input())
 # arr = list(map(int, input().rstrip().split()))
 #
@@ -549,7 +550,6 @@ for i in range(string_cases):  # for loop to take n strings
 # print(float(c))
 
 
-
 # leap year
 
 def is_leap(year):
@@ -559,36 +559,35 @@ def is_leap(year):
             if year % 400 == 0:
                 return leap
             else:
-                return not(leap)
+                return not (leap)
         else:
             return leap
     else:
-        return not(leap)
+        return not (leap)
 
 
 year = int(input())
 print(is_leap(year))
 
-
 n = int(input())
 sum = ''
-for i in range(1,n+1):
-    sum +=str(i)
+for i in range(1, n + 1):
+    sum += str(i)
 print(sum)
 
-
-#dictionary sample
+# dictionary sample
 import sys
+
 n = int(sys.stdin.readline().strip())
-book = { }
-for  i in range(n):
+book = {}
+for i in range(n):
     entry = sys.stdin.readline().strip().split()
     book[entry[0]] = entry[1]
 
 query = input()
 while query:
     no = book.get(query)
-    print(str(query) +'=' + str(no))
+    print(str(query) + '=' + str(no))
 
 else:
     print('Not Found')
@@ -596,9 +595,9 @@ query = input()
 
 # factorial
 n = int(input())
-fact =1
-for i in range(1, n+1):
-    fact=fact*i
+fact = 1
+for i in range(1, n + 1):
+    fact = fact * i
 print(fact)
 
 # convertion of decimal into binary
@@ -611,11 +610,33 @@ while n > 0:  # condition
     n = n // 2  # divide the input by 2 and store in n
 print(rem)
 
-#DATE TIME modules
-import datetime #importing
+# DATE TIME modules
+import datetime  # importing
 
 today = datetime.date.today()  # using datetime method saving todays date in variable 'today'
-birthday = datetime.date(1999, 3, 22) # saving the input date into birthday
-print(today - birthday) #calculation of current age
-date = datetime.datetime.strptime('march 09, 2019', '%B %d, %Y')#date  format
+birthday = datetime.date(1999, 3, 22)  # saving the input date into birthday
+print(today - birthday)  # calculation of current age
+date = datetime.datetime.strptime('march 09, 2019', '%B %d, %Y')  # date format
 print(date)
+
+#inheritance
+
+class A:#super class
+    def feature1(self):
+        print('feature ones is working')
+
+    def feature2(self):
+        print('feature two is working')
+
+class B(A):#subclass
+    def feature3(self):
+        print('feature three is working')
+
+    def feature4(self):
+        print('feature four is working')
+
+
+a = A()
+b= B()
+a.feature1()
+b.feature3()
