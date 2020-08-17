@@ -619,16 +619,18 @@ print(today - birthday)  # calculation of current age
 date = datetime.datetime.strptime('march 09, 2019', '%B %d, %Y')  # date format
 print(date)
 
-#inheritance
 
-class A:#super class
+# inheritance
+
+class A:  # super class
     def feature1(self):
         print('feature ones is working')
 
     def feature2(self):
         print('feature two is working')
 
-class B(A):#subclass
+
+class B(A):  # subclass
     def feature3(self):
         print('feature three is working')
 
@@ -636,12 +638,12 @@ class B(A):#subclass
         print('feature four is working')
 
 
-#ABSTRACT method
+# ABSTRACT method
 
-from abc import ABC, abstractmethod #importing abstract library
+from abc import ABC, abstractmethod  # importing abstract library
 
 
-class Computer(ABC):#abstract classes cannot use objects
+class Computer(ABC):  # abstract classes cannot use objects
     @abstractmethod
     def process(self):
         print('runing')
@@ -651,10 +653,43 @@ class Laptop(Computer):
     def process(self):
         print('running')
 
+
 com = Laptop()
 com.process()
 
 a = A()
-b= B()
+b = B()
 a.feature1()
 b.feature3()
+
+# hackerank day 13 solution
+from abc import ABCMeta, abstractmethod
+
+
+class Book(object, metaclass=ABCMeta):
+    def __init__(self, title, author):
+        self.title = title
+        self.author = author
+
+    @abstractmethod
+    def display(): pass
+
+
+# Write MyBook class
+class MyBook(Book):
+    def __init__(self, title, author, price):
+        self.title = title
+        self.author = author
+        self.price = price
+
+    def display(self):
+        print(f'Title: {self.title}')
+        print(f'Author: {self.author}')
+        print(f'Price: {self.price}')
+
+
+title = input()
+author = input()
+price = int(input())
+new_novel = MyBook(title, author, price)
+new_novel.display()
