@@ -636,6 +636,24 @@ class B(A):#subclass
         print('feature four is working')
 
 
+#ABSTRACT method
+
+from abc import ABC, abstractmethod #importing abstract library
+
+
+class Computer(ABC):#abstract classes cannot use objects
+    @abstractmethod
+    def process(self):
+        print('runing')
+
+
+class Laptop(Computer):
+    def process(self):
+        print('running')
+
+com = Laptop()
+com.process()
+
 a = A()
 b= B()
 a.feature1()
